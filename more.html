@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>More - Extra Activities</title>
+    <link rel="icon" href="resources/images/logo.png" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Roboto:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Sticky Navigation -->
+    <header>
+                <nav class="navbar sticky-nav">
+                        <div class="logo">Nandini Gawankar</div>
+                        <ul class="nav-links">
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="index.html#skills">Skills</a></li>
+                                <li><a href="index.html#experience">Experience</a></li>
+                                <li><a href="index.html#projects">Projects</a></li>
+                                <li><a href="index.html#design">Designs</a></li>
+                                <li><a href="index.html#contact">Contact</a></li>
+                                <li class="dropdown">
+                                    <a href="more.html" class="dropbtn">More</a>
+                                    <div class="dropdown-content">                        
+                                        <a href="#hackathons">Hackathons</a>
+                                        <a href="#positions">Positions of Responsibility</a>
+                                        <a href="#certifications">Certifications</a>
+                                        <a href="#academics">Academics</a>
+                                        <a href="#extra-curricular">Extra Circular Activities</a>
+                                    </div>
+                                </li>
+                        </ul>
+                        <div class="nav-social">
+                                <a href="https://in.linkedin.com/in/nandini-gawankar" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+                                <a href="https://github.com/nandinig2001" class="fa fa-github" aria-label="GitHub"></a>
+                                <a href="https://www.behance.net/nandinig1" class="fa fa-behance" aria-label="Behance"></a>
+                                <a href="https://www.instagram.com/nans_designs_/" class="fa fa-instagram" aria-label="Instagram"></a>
+                        </div>
+                </nav>
+    </header>
+
+    <!-- Hero Section Placeholder -->
+    <div id="hero-placeholder"></div>
+    <script>
+      fetch('hero-section.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('hero-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <main> 
+
+        <!-- Academics Section -->
+        <section id="academics" class="section">
+            <h2>Academics</h2>
+            <ul>
+                <li><strong>Bachelor of Engineering in Information Technology</strong> - Mumbai University (FY 2023)<br>GPA: 9.23/10</li>
+                <li><strong>Higher Secondary Certificate</strong> - Nirmala Memorial Foundation College (FY 2019)<br>Percentage: 73%</li>
+                <li><strong>Secondary School Certificate</strong> - Madhavrao Bhagwat High School (FY 2017)<br>Percentage: 96%</li>
+            </ul>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li><strong>AWS Certified Cloud Practitioner</strong> - AWS, Issued Oct 2023</li>
+                <li><strong>Google The Bits and Bytes of Computer Networking</strong> - Coursera, Issued Jan 2022</li>
+                <li><strong>Google Technical Support Fundamentals</strong> - Coursera, Issued: Issued Jun 2021</li>
+                <li><strong>UI UX Design</strong> - Internshala, Issued Mar 2021</li>
+                <li><strong>UI UX Design</strong> - GrowthSchool, Issued: April 2025</li>
+            </ul>
+        </section>
+
+        <!-- Hackathons Section -->
+        <section id="hackathons" class="section">
+            <h2>Hackathons</h2>
+            <ul>
+                <li><strong>Smart India Hackathon 2024</strong> - Finalist<br>Project: "EduConnect" - A platform for connecting students and mentors.</li>
+                <li><strong>CodeShastra 2023</strong> - Winner<br>Project: "HealthTrack" - Health monitoring web app.</li>
+                <li><strong>HackVJTI 2022</strong> - Runner-up<br>Project: "EcoAlert" - Environmental awareness tool.</li>
+            </ul>
+        </section>
+
+        <!-- Positions Section -->
+        <section id="positions" class="section">
+            <h2>Positions of Responsibility</h2>
+            <ul>
+                <li><strong>Design Head - ISTE TSEC</strong><br> Lead a team of 5 members at Indian Society for Technical Education, TSEC <br>Organised and Managed 2 major technical events [online and offline] with a footfall of more than 300 participants during the tenure.</li>
+                <li><strong>Creative Assistant/ Social Media Manager, IETE,TSEC</strong><br>Coordinated with a team of 5 members of Institution of Electronics and Telecommunication Engineers, TSEC<br>Successfully organized inter-college technical events and competitions with a footfall of more than 250 participants</li>
+            </ul>
+        </section>
+
+        <!-- Extracurricular Activities Section -->
+        <section id="extra-curricular" class="section">
+            <h2>Extracurricular Activities</h2>
+            <ul>
+               <li><strong>Intern, Web Development</strong> - ABC Corp (May-Jul 2024)<br>Developed responsive web pages, collaborated with design and backend teams.</li>
+                <li><strong>Team Lead, Coding Club VJTI</strong> (2023-2024)<br>Managed a team of 10, organized hackathons, mentored new members.</li>
+                <li><strong>Design Intern</strong> - XYZ Studio (Dec 2023-Feb 2024)<br>Created UI/UX designs for mobile apps, worked on branding projects.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+  <div id="footer-placeholder"></div>
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        });
+    </script>
+
+
+<script>
+// Smooth scroll for navigation links
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+// Reveal sections on scroll
+const sections = document.querySelectorAll('.section');
+const revealSection = () => {
+    sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            section.classList.add('visible');
+        }
+    });
+};
+window.addEventListener('scroll', revealSection);
+window.addEventListener('DOMContentLoaded', revealSection);
+</script>
+</body>
+</html>
