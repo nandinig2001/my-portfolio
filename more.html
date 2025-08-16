@@ -14,11 +14,20 @@
   <header>
   <div id="header-placeholder"></div>
   <script>
-    fetch('header.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('header-placeholder').innerHTML = data;
-      });
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('header-placeholder').innerHTML = data;
+          // Hamburger menu script
+          const hamburger = document.querySelector('.hamburger');
+          const navLinks = document.querySelector('.nav-links');
+          if (hamburger && navLinks) {
+            hamburger.addEventListener('click', function() {
+              navLinks.classList.toggle('nav-active');
+              hamburger.classList.toggle('active');
+            });
+          }
+        });
   </script>
 
     <!-- Hero Section Placeholder -->
