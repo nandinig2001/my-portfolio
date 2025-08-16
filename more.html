@@ -26,6 +26,14 @@
               navLinks.classList.toggle('nav-active');
               hamburger.classList.toggle('active');
             });
+                          // Collapse menu when clicking outside
+              document.addEventListener('click', function(e) {
+                const isClickInside = hamburger.contains(e.target) || navLinks.contains(e.target);
+                if (!isClickInside && navLinks.classList.contains('nav-active')) {
+                  navLinks.classList.remove('nav-active');
+                  hamburger.classList.remove('active');
+                }
+              });
           }
         });
   </script>
