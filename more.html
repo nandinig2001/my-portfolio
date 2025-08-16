@@ -10,35 +10,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header & Sticky Navigation -->
-    <header>
-                <nav class="navbar sticky-nav">
-                        <div class="logo">Nandini Gawankar</div>
-                        <ul class="nav-links">
-                                <li><a href="index.html#about">About</a></li>
-                                <li><a href="index.html#skills">Skills</a></li>
-                                <li><a href="index.html#experience">Experience</a></li>
-                                <li><a href="index.html#projects">Projects</a></li>
-                                <li><a href="index.html#design">Designs</a></li>
-                                <li class="dropdown">
-                                    <a href="more.html" class="dropbtn">More</a>
-                                    <div class="dropdown-content">                        
-                                        <a href="#hackathons">Hackathons</a>
-                                        <a href="#positions">Positions of Responsibility</a>
-                                        <a href="#certifications">Certifications</a>
-                                        <a href="#academics">Academics</a>
-                                        <a href="#extra-curricular">Extra Circular Activities</a>
-                                    </div>
-                                </li>
-                        </ul>
-                        <div class="nav-social">
-                                <a href="https://in.linkedin.com/in/nandini-gawankar" class="fa fa-linkedin" aria-label="LinkedIn"></a>
-                                <a href="https://github.com/nandinig2001" class="fa fa-github" aria-label="GitHub"></a>
-                                <a href="https://www.behance.net/nandinig1" class="fa fa-behance" aria-label="Behance"></a>
-                                <a href="https://www.instagram.com/nans_designs_/" class="fa fa-instagram" aria-label="Instagram"></a>
-                        </div>
-                </nav>
-    </header>
+    <!-- Header & Navigation -->
+  <header>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
 
     <!-- Hero Section Placeholder -->
     <div id="hero-placeholder"></div>

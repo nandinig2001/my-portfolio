@@ -5,41 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nandini Gawankar</title>
   <link rel="icon" href="resources/images/logo.png" type="image/jpeg">
-  <!-- Google Fonts for modern typography -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Roboto:400,500&display=swap" rel="stylesheet">
-  <!-- Add icon library -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
   <!-- Header & Navigation -->
   <header>
-    <nav class="navbar">
-      <div class="logo">Nandini Gawankar</div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#design">Designs</a></li>
-        <li class="dropdown">
-          <a href="more.html" class="dropbtn">More</a>
-          <div class="dropdown-content">
-            <a href="more.html#extra-curricular">Extra Circular Activities</a>
-            <a href="more.html#hackathons">Hackathons</a>
-            <a href="more.html#positions">Positions</a>
-            <a href="more.html#certifications">Certifications</a>
-          </div>
-        </li>
-      </ul>
-      <div class="nav-social">
-      <a href="https://in.linkedin.com/in/nandini-gawankar" class="fa fa-linkedin"></a>
-      <a href="https://github.com/nandinig2001 " class="fa fa-github"></a>
-      <a href="https://www.behance.net/nandinig1" class="fa fa-behance"></a>
-      <a href="https://www.instagram.com/nans_designs_/" class="fa fa-instagram"></a>
-       </div>
-    </nav>
-  </header>
+  <div id="header-placeholder"></div>
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
+
 
   <!-- Hero Section Placeholder -->
   <div id="hero-placeholder"></div>
